@@ -1,12 +1,12 @@
-# chart-editor 
+# ChartEditor
 A low code chart editor based on vue3 ,echart and g2.  
 一个基于Vue3全家桶和Echart打造的低代码图表编辑器。 
 
 You can use it draw various charts easily.
 
 # How to start 
-1. git clone https://github.com/HHN0609/chart-editor.git 
-2. `cd chart-editor`
+1. git clone https://github.com/zhoumoumouzzz/ChartEditor.git
+2. `cd ChartEditor`
 3. Run `npm install`
 4. Start your local Mysql service 
 5. Change the default Mysql configuration in `./server/config.js` 

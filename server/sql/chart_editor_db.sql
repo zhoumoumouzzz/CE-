@@ -1,0 +1,70 @@
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `chart_detail_info`;
+CREATE TABLE `chart_detail_info` (
+  `project_id` char(50) NOT NULL,
+  `chart_id` char(50) NOT NULL,
+  `chart_detail` json DEFAULT NULL,
+  PRIMARY KEY (`chart_id`),
+  KEY `project_id` (`project_id`),
+  CONSTRAINT `chart_detail_info_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project_info` (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `chart_detail_info` (`project_id`, `chart_id`, `chart_detail`) VALUES
+('163a2181-1720-41aa-c2e0-96afce939cb9',	'1d1c6132-fab3-4feb-8425-7ff86f3e805d',	'{\"uid\": \"1d1c6132-fab3-4feb-8425-7ff86f3e805d\", \"basicData\": {\"x\": 420.64699999999993, \"y\": 81.5, \"type\": \"Bar\", \"index\": 0, \"width\": 326, \"height\": 264, \"rotate\": 0}, \"sourceData\": [{\"2015\": 43.3, \"2016\": 85.8, \"2017\": 93.7, \"product\": \"Matcha Latte\"}, {\"2015\": 83.1, \"2016\": 73.4, \"2017\": 55.1, \"product\": \"Milk Tea\"}, {\"2015\": 86.4, \"2016\": 65.2, \"2017\": 82.5, \"product\": \"Cheese Cocoa\"}, {\"2015\": 72.4, \"2016\": 53.9, \"2017\": 49.1, \"product\": \"Walnut Brownie\"}], \"optionsData\": {\"grid\": {\"top\": 30, \"left\": 30, \"show\": false, \"right\": 30, \"bottom\": 30, \"borderColor\": \"#FFFFFF\", \"borderWidth\": 1, \"backgroundColor\": \"transparent\"}, \"title\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"text\": \"Bar\", \"position\": \"top-left\"}, \"xAxis\": {\"name\": \"\", \"show\": true, \"lineType\": \"solid\", \"nameFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"labelFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"lineColor\": \"#FFFFFF\", \"lineWidth\": 1}, \"yAxis\": {\"name\": \"\", \"show\": true, \"lineType\": \"solid\", \"nameFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"labelFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"lineColor\": \"#8F7B7B7A\", \"lineWidth\": 1}, \"legend\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"orient\": \"horizontal\", \"position\": \"top-center\"}, \"backGround\": {\"color\": \"#000000\"}, \"chartStyle\": {\"isStack\": true, \"orientation\": \"vertical\"}, \"seriseLabel\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"position\": \"top\"}}}'),
+('163a2181-1720-41aa-c2e0-96afce939cb9',	'b485a01b-a5ac-4fe8-a859-dbb3b714579f',	'{\"uid\": \"b485a01b-a5ac-4fe8-a859-dbb3b714579f\", \"basicData\": {\"x\": 55.0165, \"y\": 35.9605, \"type\": \"Pie\", \"index\": 1, \"width\": 265, \"height\": 237, \"rotate\": 0}, \"sourceData\": [{\"name\": \"Search Engine\", \"value\": 500}, {\"name\": \"Direct\", \"value\": 735}, {\"name\": \"Email\", \"value\": 580}, {\"name\": \"Union Ads\", \"value\": 484}, {\"name\": \"Video Ads\", \"value\": 300}], \"optionsData\": {\"grid\": {\"show\": false, \"borderColor\": \"#FFFFFF\", \"borderWidth\": 1, \"backgroundColor\": \"transparent\"}, \"title\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"text\": \"Pie\", \"position\": \"top-left\"}, \"legend\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"orient\": \"vertical\", \"position\": \"top-right\"}, \"backGround\": {\"color\": \"#000000\"}, \"chartStyle\": {\"radiusmax\": \"70\", \"radiusmin\": \"0\", \"isDoughnut\": false, \"isNightingale\": true}, \"seriesLabel\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"position\": \"inner\"}, \"seriesLabelLine\": {\"show\": false, \"length\": 35, \"length2\": 10, \"maxSurfaceAngle\": 90}}}'),
+('aba5640f-d3b6-43e8-c3ee-ce1df0d626dd',	'ddcb949e-d571-477b-9b59-65896b860434',	'{\"uid\": \"ddcb949e-d571-477b-9b59-65896b860434\", \"basicData\": {\"x\": 39, \"y\": 178, \"type\": \"Pie\", \"index\": 3, \"width\": 294, \"height\": 238, \"rotate\": 0}, \"sourceData\": [{\"name\": \"Search Engine\", \"value\": 1048}, {\"name\": \"Direct\", \"value\": 735}, {\"name\": \"Email\", \"value\": 580}, {\"name\": \"Union Ads\", \"value\": 484}, {\"name\": \"Video Ads\", \"value\": 300}], \"optionsData\": {\"grid\": {\"show\": false, \"borderColor\": \"#FFFFFF\", \"borderWidth\": 1, \"backgroundColor\": \"transparent\"}, \"title\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"text\": \"Pie\", \"position\": \"top-left\"}, \"legend\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"orient\": \"horizontal\", \"position\": \"top-center\"}, \"backGround\": {\"color\": \"#000000\"}, \"chartStyle\": {\"radiusmax\": \"70\", \"radiusmin\": \"0\", \"isDoughnut\": false, \"isNightingale\": true}, \"seriesLabel\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"position\": \"inner\"}, \"seriesLabelLine\": {\"show\": false, \"length\": 35, \"length2\": 10, \"maxSurfaceAngle\": 90}}}'),
+('98033a4e-615a-4b12-c38a-8a0afa62a434',	'e7b5e0fd-f5f1-4b95-e210-76efe74cac38',	'{\"uid\": \"e7b5e0fd-f5f1-4b95-e210-76efe74cac38\", \"basicData\": {\"x\": 318.32478010584305, \"y\": 66.3187, \"type\": \"Bar\", \"index\": 0, \"width\": 650, \"height\": 336, \"rotate\": -0.0450283195806378}, \"sourceData\": [{\"2015\": 43.3, \"2016\": 85.8, \"2017\": 93.7, \"product\": \"Matcha Latte\"}, {\"2015\": 83.1, \"2016\": 73.4, \"2017\": 1000, \"product\": \"Milk Tea\"}, {\"2015\": 86.4, \"2016\": 65.2, \"2017\": 82.5, \"product\": \"Cheese Cocoa\"}, {\"2015\": 72.4, \"2016\": 53.9, \"2017\": 49.1, \"product\": \"Walnut Brownie\"}], \"optionsData\": {\"grid\": {\"top\": 30, \"left\": 30, \"show\": false, \"right\": 30, \"bottom\": 30, \"borderColor\": \"#FFFFFF\", \"borderWidth\": 1, \"backgroundColor\": \"transparent\"}, \"title\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"text\": \"Bar\", \"position\": \"top-left\"}, \"xAxis\": {\"name\": \"\", \"show\": true, \"lineType\": \"solid\", \"nameFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"labelFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"lineColor\": \"#FFFFFF\", \"lineWidth\": 1}, \"yAxis\": {\"name\": \"\", \"show\": true, \"lineType\": \"solid\", \"nameFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"labelFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"lineColor\": \"#FFFFFF\", \"lineWidth\": 1}, \"legend\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"orient\": \"horizontal\", \"position\": \"top-center\"}, \"backGround\": {\"color\": \"#000000\"}, \"chartStyle\": {\"isStack\": false, \"orientation\": \"vertical\"}, \"seriseLabel\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"position\": \"top\"}}}'),
+('98033a4e-615a-4b12-c38a-8a0afa62a434',	'f405de3b-6c89-4b23-fb4f-af432e8c23d3',	'{\"uid\": \"f405de3b-6c89-4b23-fb4f-af432e8c23d3\", \"basicData\": {\"x\": 18.47402760898359, \"y\": 27.000772801996337, \"type\": \"Pie\", \"index\": 1, \"width\": 290, \"height\": 219, \"rotate\": 0}, \"sourceData\": [{\"name\": \"Search Engine\", \"value\": 1048}, {\"name\": \"Direct\", \"value\": 735}, {\"name\": \"Email\", \"value\": 580}, {\"name\": \"Union Ads\", \"value\": 484}, {\"name\": \"Video Ads\", \"value\": 300}], \"optionsData\": {\"grid\": {\"show\": false, \"borderColor\": \"#FFFFFF\", \"borderWidth\": 1, \"backgroundColor\": \"transparent\"}, \"title\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"text\": \"Pie\", \"position\": \"top-left\"}, \"legend\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"orient\": \"horizontal\", \"position\": \"top-center\"}, \"backGround\": {\"color\": \"#000000\"}, \"chartStyle\": {\"radiusmax\": \"70\", \"radiusmin\": \"0\", \"isDoughnut\": false, \"isNightingale\": true}, \"seriesLabel\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"position\": \"inner\"}, \"seriesLabelLine\": {\"show\": false, \"length\": 35, \"length2\": 10, \"maxSurfaceAngle\": 90}}}'),
+('aba5640f-d3b6-43e8-c3ee-ce1df0d626dd',	'f9255161-dbe2-4eb4-9456-a7fe7bb72577',	'{\"uid\": \"f9255161-dbe2-4eb4-9456-a7fe7bb72577\", \"basicData\": {\"x\": 453, \"y\": 42, \"type\": \"Bar\", \"index\": 1, \"width\": 300, \"height\": 247, \"rotate\": 0}, \"sourceData\": [{\"2015\": 43.3, \"2016\": 85.8, \"2017\": 93.7, \"product\": \"Matcha Latte\"}, {\"2015\": 83.1, \"2016\": 73.4, \"2017\": 55.1, \"product\": \"Milk Tea\"}, {\"2015\": 86.4, \"2016\": 65.2, \"2017\": 82.5, \"product\": \"Cheese Cocoa\"}, {\"2015\": 72.4, \"2016\": 53.9, \"2017\": 49.1, \"product\": \"Walnut Brownie\"}], \"optionsData\": {\"grid\": {\"top\": 30, \"left\": 30, \"show\": false, \"right\": 30, \"bottom\": 30, \"borderColor\": \"#FFFFFF\", \"borderWidth\": 1, \"backgroundColor\": \"transparent\"}, \"title\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"text\": \"Bar\", \"position\": \"top-left\"}, \"xAxis\": {\"name\": \"\", \"show\": true, \"lineType\": \"solid\", \"nameFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"labelFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"lineColor\": \"#FFFFFF\", \"lineWidth\": 1}, \"yAxis\": {\"name\": \"\", \"show\": true, \"lineType\": \"solid\", \"nameFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"labelFont\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"lineColor\": \"#FFFFFF\", \"lineWidth\": 1}, \"legend\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"orient\": \"horizontal\", \"position\": \"top-center\"}, \"backGround\": {\"color\": \"#000000\"}, \"chartStyle\": {\"isStack\": true, \"orientation\": \"horizontal\"}, \"seriseLabel\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"position\": \"top\"}}}'),
+('aba5640f-d3b6-43e8-c3ee-ce1df0d626dd',	'ff0d4c6c-9dd9-45b1-8982-2e0c7b2b9ca1',	'{\"uid\": \"ff0d4c6c-9dd9-45b1-8982-2e0c7b2b9ca1\", \"basicData\": {\"x\": 0, \"y\": 0, \"type\": \"Pie\", \"index\": 2, \"width\": 100, \"height\": 100, \"rotate\": 0}, \"sourceData\": [{\"name\": \"Search Engine\", \"value\": 1048}, {\"name\": \"Direct\", \"value\": 735}, {\"name\": \"Email\", \"value\": 580}, {\"name\": \"Union Ads\", \"value\": 484}, {\"name\": \"Video Ads\", \"value\": 300}], \"optionsData\": {\"grid\": {\"show\": false, \"borderColor\": \"#FFFFFF\", \"borderWidth\": 1, \"backgroundColor\": \"transparent\"}, \"title\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"text\": \"Pie\", \"position\": \"top-left\"}, \"legend\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"orient\": \"horizontal\", \"position\": \"top-center\"}, \"backGround\": {\"color\": \"#000000\"}, \"chartStyle\": {\"radiusmax\": \"70\", \"radiusmin\": \"0\", \"isDoughnut\": false, \"isNightingale\": false}, \"seriesLabel\": {\"font\": {\"size\": \"10\", \"color\": \"#FFFFFF\", \"family\": \"sans-serif\"}, \"show\": true, \"position\": \"inner\"}, \"seriesLabelLine\": {\"show\": false, \"length\": 35, \"length2\": 10, \"maxSurfaceAngle\": 90}}}');
+
+DROP TABLE IF EXISTS `project_basic`;
+CREATE TABLE `project_basic` (
+  `project_id` char(50) NOT NULL,
+  `width` int(5) NOT NULL,
+  `height` int(5) NOT NULL,
+  `init_zoom` double NOT NULL DEFAULT '1',
+  `bg_color` char(20) NOT NULL DEFAULT '#DCDCDC',
+  `viewport_color` char(20) NOT NULL DEFAULT '#272C2C',
+  KEY `project_id` (`project_id`),
+  CONSTRAINT `project_basic_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project_info` (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `project_basic` (`project_id`, `width`, `height`, `init_zoom`, `bg_color`, `viewport_color`) VALUES
+('aba5640f-d3b6-43e8-c3ee-ce1df0d626dd',	800,	450,	0.81,	'#DCDCDC',	'#272C2C'),
+('163a2181-1720-41aa-c2e0-96afce939cb9',	800,	450,	0.7510623853050804,	'#DCDCDC',	'#272C2C'),
+('98033a4e-615a-4b12-c38a-8a0afa62a434',	1000,	450,	0.7036841083428733,	'#FFFFFFFF',	'#272C2C');
+
+DROP TABLE IF EXISTS `project_info`;
+CREATE TABLE `project_info` (
+  `project_id` char(50) NOT NULL,
+  `project_name` char(15) DEFAULT NULL,
+  `owner` char(15) DEFAULT NULL,
+  `create_time` timestamp NULL DEFAULT NULL,
+  `last_modify` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`project_id`),
+  KEY `owner` (`owner`),
+  CONSTRAINT `project_info_ibfk_1` FOREIGN KEY (`owner`) REFERENCES `user_info` (`account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `project_info` (`project_id`, `project_name`, `owner`, `create_time`, `last_modify`) VALUES
+('163a2181-1720-41aa-c2e0-96afce939cb9',	'test2',	'root',	'2022-08-12 07:22:40',	'2022-08-12 07:47:18'),
+('98033a4e-615a-4b12-c38a-8a0afa62a434',	'test3',	'root',	'2022-08-15 02:01:14',	'2022-08-15 02:10:11'),
+('aba5640f-d3b6-43e8-c3ee-ce1df0d626dd',	'test1',	'root',	'2022-08-01 09:01:53',	'2022-08-12 07:00:17');
+
+DROP TABLE IF EXISTS `user_info`;
+CREATE TABLE `user_info` (
+  `account` char(15) NOT NULL,
+  `name` char(15) DEFAULT NULL,
+  `pwd` char(15) DEFAULT NULL,
+  `is_admin` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `user_info` (`account`, `name`, `pwd`, `is_admin`) VALUES
+('luyuke',	'lyk',	'123456',	1),
+('root',	'hehaonan',	'123456',	2);
