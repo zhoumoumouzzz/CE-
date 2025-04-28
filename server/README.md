@@ -2,8 +2,8 @@
 A simple server for chart-editor.  
 
 # How to use 
-1. `git clone https://github.com/HHN0609/chart-editor-backend.git` 
-2. `cd chart-editor-backend` 
+1. `git clone https://github.com/zhoumoumouzzz/ChartEditor.git` 
+2. `cd ChartEditor` 
 3. `npm install` 
 4. Before you run this project, you should change the *db* in `./src/config.js` to adapt your local Mysql.
 5. Copy the content of [chart_editor_db.sql](.sql/chart_editor_db.sql), then paste into your local Mysql command line to initial the databaset which called `chart_editor_db`.
